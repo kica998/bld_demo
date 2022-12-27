@@ -1,3 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to "About Me", about_path %>
+<div class="conteiner">
+  <h1>Pages#home</h1>
+  <% if current_user %>
+    Hello <%= current_user.email %>
+  <% end %>
+  <p>Find me in app/views/pages/home.html.erb</p>
+  <%= link_to "About Me", about_path, class:"btn btn-primary"%>
+  <%= link_to "Blog", posts_path, class:"btn btn-success" %>
+</div>
